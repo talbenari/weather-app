@@ -1,53 +1,53 @@
 #requestContainer {
-    width: 35%;
-    height: 50%;
-    background: rgb(181, 181, 181);
+    width: 70%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-
+    align-items: flex-start;
 }
 
-#requestContainer p {
-    width: 80%;
-    font-size: 48px;
+#requestParagraph{
+    width: 85%;
+    font-size: 3vw;
+    font-weight: 200;
     color: rgb(119, 119, 119);
+    line-height: 4.4vw;
+    text-align: left;
 }
 
 #labelContainer {
-    height: 120px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+   display: flex;
+   flex-direction: column;
 }
 
-#labelContainer label {
+#inputLabel {
     color: rgb(119, 119, 119);
-    font-size: large;
-    margin-bottom: 12px;
-    margin-left: 4px;
+    font-size: 1.5vw;
+    margin-bottom: 2%;
+    margin-left: 2%;
 }
 
 
 #inputContainer {
     background: rgb(255, 255, 255);
-    width: 100%;
-    height: 64px;
+    width: 90%;
+    height: 60px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 8px;
-    padding: 12px;
+    padding-right: 12px;
 }
 
 #inputContainer input {
     height: 80%;
     width: 70%;
     border: none;
-    font-size: 18px;
+    outline: none;
+    font-size: 1.8vw;
+    padding-left: 8px;
 }
 
 #inputContainer button {
@@ -55,6 +55,97 @@
     width: 25%;
     background: rgb(30, 105, 43);
     border-radius: 8px;
-    color: rgb(207, 207, 207);
-    font-size: 18px;
+    color: rgb(220, 220, 220);
+    font-size: 1.2vw;
+    font-weight: 100;
+}
+
+#inputContainer button:hover {
+    cursor: pointer;
+}
+
+#errorMessage {
+    font-size: 1.2vw;
+    color: rgb(170, 38, 38);
+}
+
+@media screen and (max-width: 1024px) {
+
+    #requestContainer {
+        align-items: center;
+    }
+
+    #requestParagraph{
+        width: 70%;
+        font-size: 3.6vw;
+        line-height: 4.8vw;
+        text-align: center;
+    }
+
+    #labelContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+     }
+
+     #inputLabel {
+        font-size: 2vw;
+     }
+
+     #inputContainer input {
+        font-size: 2.4vw;
+    }
+
+    #inputContainer button {
+        font-size: 1.8vw;
+        font-weight: 100;
+    }
+
+     #errorMessage {
+        font-size: 2vw;
+        color: brown;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+    #requestContainer {
+        width: 100%;
+        align-items: center;
+    }
+
+    #requestParagraph{
+        width: 70%;
+        font-size: 5vw;
+        line-height: 6.2vw;
+        text-align: center;
+    }
+
+    #labelContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+     }
+
+     #inputLabel {
+        font-size: 3.2vw;
+     }
+
+     #inputContainer input {
+        font-size: 4.2vw;
+    }
+
+    #inputContainer button {
+        font-size: 3.6vw;
+        font-weight: 100;
+    }
+
+     #errorMessage {
+        font-size: 3vw;
+        color: brown;
+    }
+
 }

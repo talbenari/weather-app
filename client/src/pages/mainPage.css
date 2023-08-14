@@ -1,22 +1,52 @@
 #mainPage {
-    background: rgb(213, 213, 213);
+    background: rgb(238, 238, 238);
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+}
+
+#req {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#res {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* tablet styles */
 @media screen and (max-width: 1024px) {
 
+    #mainPage {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #req {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #res {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
-
-
-/* Phone styles */
-@media screen and (max-width: 768px) {
-
-}
-  
