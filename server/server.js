@@ -9,16 +9,19 @@ app.use(cors());
 
 
 app.get('/weather', async (req, res) => {
+  
   try {
     const { city } = req.query;
     const apiUrl = `http://api.weatherapi.com/v1/current.json?key=90e9aa3641dd4b31a09190503231208&q=${city}&aqi=no`;
 
     const response = await axios.get(apiUrl);
     const weatherData = response.data;
+
     console.log(weatherData);
     console.log(response.status);
 
     res.json(weatherData);
+    
   } catch (error) {
     console.error(error);
 

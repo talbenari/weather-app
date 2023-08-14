@@ -22,7 +22,7 @@
 }
 
 #inputLabel {
-    color: rgb(119, 119, 119);
+    color: rgb(160, 160, 160);
     font-size: 1.5vw;
     margin-bottom: 2%;
     margin-left: 2%;
@@ -139,7 +139,7 @@
     }
 
     #inputContainer button {
-        font-size: 3.6vw;
+        font-size: 3.2vw;
         font-weight: 100;
     }
 

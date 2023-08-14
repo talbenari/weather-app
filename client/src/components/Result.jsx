@@ -23,7 +23,7 @@ function Result(props) {
           <div className='additionalInfo'>{props.weatherInfo?.current.humidity}%</div>
         </div>
         <div className='infoWrapper'>
-          <div className='infoTitle'>wind</div>
+          <div className='infoTitle'>Wind</div>
           <div className='additionalInfo'>{props.weatherInfo?.current.wind_kph} km/h</div>
         </div>
       </div>
