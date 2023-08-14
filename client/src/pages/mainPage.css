@@ -1,0 +1,22 @@
+#mainPage {
+    background: rgb(213, 213, 213);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* tablet styles */
+@media screen and (max-width: 1024px) {
+
+}
+
+
+/* Phone styles */
+@media screen and (max-width: 768px) {
+
+}
+  
