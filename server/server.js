@@ -1,46 +1,19 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+require('dotenv').config();
+const getWeather = require('./services/getWeather');
 
 
 const app = express();
 
+const apiKey = process.env.API_KEY;
+const port = process.env.PORT;
+
 app.use(cors());
 
 
-app.get('/weather', async (req, res) => {
-  
-  try {
-    const { city } = req.query;
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=90e9aa3641dd4b31a09190503231208&q=${city}&aqi=no`;
-
-    const response = await axios.get(apiUrl);
-    const weatherData = response.data;
-
-    console.log(weatherData);
-    console.log(response.status);
-
-    res.json(weatherData);
-    
-  } catch (error) {
-    console.error(error);
-
-    if (error.response) {
-      const statusCode = error.response.status;
-      let errorMessage = 'API error occurred';
-
-      if (statusCode === 404 || statusCode === 400) {
-        errorMessage = 'City not found or invalid input';
-      } else if (statusCode === 500) {
-        errorMessage = 'Internal server error';
-      }
-      res.status(statusCode).json({ error: errorMessage });
-    }
-  }
-});
+app.get('/weather', getWeather.getWeather);
 
 
-
-
-
-app.listen(8000, () => console.log('listening on port 8000'));
+app.listen(port, () => console.log(`listening on port ${port}`));
