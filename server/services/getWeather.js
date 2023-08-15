@@ -1,11 +1,13 @@
 const axios = require("axios");
+require('dotenv').config();
 
+const apiKey = process.env.API_KEY;
 
 exports.getWeather = async (req, res) => {
   
     try {
       const { city } = req.query;
-      const apiUrl = `http://api.weatherapi.com/v1/current.json?key=90e9aa3641dd4b31a09190503231208&q=${city}&aqi=no`;
+      const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
   
       const response = await axios.get(apiUrl);
       const weatherData = response.data;
